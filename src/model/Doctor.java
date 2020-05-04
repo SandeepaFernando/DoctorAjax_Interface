@@ -31,11 +31,7 @@ public class Doctor {
 				return "Error while connecting to the database for reading.";
 			}
 			// Prepare the html table to be displayed
-//			output = "<table border=\"1\"><tr><th>Doctor ID</th>" 
-//					+ "<th>Doctor Name</th><th>Doctor Address</th>"
-//					+ "<th>Doctor Specialty</th><th>Doctor Mobile</th>"
-//					+ "<th colspan=\"2\">Actions</th>";
-			
+		
 			output = "<table border='1'><tr><th>Doctor ID</th>" + "<th>Doctor Name</th><th>Doctor Address</th>"+ "<th>Doctor Specialty</th>"
 					+ "<th>Doctor Mobile</th>" + "<th>Update</th><th>Remove</th></tr>";
 
@@ -55,8 +51,6 @@ public class Doctor {
 				output += "<tr><td><input id='hidItemIDUpdate'" + "name='hidItemIDUpdate' type='hidden'" + "value='"
 						+ dId + "'>" + dId + "</td>";
 				
-				//output += "<tr><td>" + dId + "</td>";
-				//output += "<tr><td>" + dId + "</td>";
 				output += "<td>" + dName + "</td>";
 				output += "<td>" + dAddress + "</td>";
 				output += "<td>" + dSpecialty + "</td>";
@@ -106,7 +100,6 @@ public class Doctor {
 			// execute the statement
 			preparedStmt.execute();
 			con.close();
-			//output = "Inserted successfully";
 			String newDoctor = viewDoctors();
 			output = "{\"status\":\"success\", \"data\": \"" + newDoctor + "\"}";
 			System.out.println("Add "+output);
@@ -143,7 +136,7 @@ public class Doctor {
 			// execute the statement
 			preparedStmt.execute();
 			con.close();
-			//output = "Updated successfully";
+
 			String newDoctor = viewDoctors();
 			output = "{\"status\":\"success\", \"data\": \"" + newDoctor + "\"}";
 			
@@ -173,8 +166,7 @@ public class Doctor {
 			// execute the statement
 			preparedStmt.execute();
 			con.close();
-			//output = "Deleted successfully";
-			
+		
 			String newDoctor = viewDoctors();
 			output = "{\"status\":\"success\", \"data\": \"" + newDoctor + "\"}";
 
@@ -186,36 +178,4 @@ public class Doctor {
 		return output;
 	}
 	
-//	public Boolean GetSessionStatus(int doctorID) {
-//		int user = 0;
-//		try {
-//			Connection con = connect();
-//			Statement stmt = con.createStatement();
-//			ResultSet rs = stmt.executeQuery("SELECT * FROM doctors WHERE DId='"+doctorID+"'");
-//			
-//			while(rs.next()) {
-//				user = rs.getInt("DId");
-//				System.out.println("User....."+ user);
-//			}
-//		}catch(Exception e){
-//				System.out.println("Error....."+ e);
-//			}
-//			if(doctorID == user) {
-//				return true;
-//			}else {
-//				return false;
-//			}
-//		}
-//	
-//	public String GetSession(int doctorID) {
-//		if(GetSessionStatus(doctorID)) {
-//			System.out.println("User.....True");
-//			return "True";
-//			
-//		}else {
-//			System.out.println("User.....False" + doctorID);
-//			return "False";
-//			
-//		}
-//	}
 }

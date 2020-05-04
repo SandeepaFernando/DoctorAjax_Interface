@@ -143,7 +143,5 @@ function validateItemForm() {
 
 	}
 
-
-
 	return true;
 }
