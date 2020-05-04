@@ -133,13 +133,16 @@ function validateItemForm() {
 	}
 	// is numerical value
 	var tmpPrice = $("#dmobile").val().trim();
+	var len = tmpPrice.length;
+	if(len != 10){
+		return "You enterd "+ len+ " Numbers! Enter 10 Numbers to continue."; 
+	}
+	
 	if (!$.isNumeric(tmpPrice)) {
 		return "Insert a numerical value.";
 
 	}
-	if(tmpPrice.lenght != 10){
-		return "Phone number must have 10 numbers!"+tmpPrice.lenght; 
-	}
+
 
 
 	return true;

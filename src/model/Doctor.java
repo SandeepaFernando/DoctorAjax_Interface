@@ -52,7 +52,11 @@ public class Doctor {
 				String dMobile = rs.getString("DMobile");
 
 				// Add into the html table
-				output += "<tr><td>" + dId + "</td>";
+				output += "<tr><td><input id='hidItemIDUpdate'" + "name='hidItemIDUpdate' type='hidden'" + "value='"
+						+ dId + "'>" + dId + "</td>";
+				
+				//output += "<tr><td>" + dId + "</td>";
+				//output += "<tr><td>" + dId + "</td>";
 				output += "<td>" + dName + "</td>";
 				output += "<td>" + dAddress + "</td>";
 				output += "<td>" + dSpecialty + "</td>";
@@ -115,7 +119,7 @@ public class Doctor {
 		return output;
 	}
 
-	public String updateDoctor(String id, String name, String address, String specialty, String mobile) {
+	public String updateDoctor(String did, String name, String address, String specialty, String mobile) {
 
 		String output = "";
 
@@ -135,7 +139,7 @@ public class Doctor {
 			preparedStmt.setString(2, address);
 			preparedStmt.setString(3, specialty);
 			preparedStmt.setString(4, mobile);
-			preparedStmt.setString(5, id);
+			preparedStmt.setString(5, did);
 			// execute the statement
 			preparedStmt.execute();
 			con.close();
