@@ -21,23 +21,6 @@
 			<div class="col-6">
 
 				<h1>Doctor Management</h1>
-				<!--  			<form id="formItem" name="formItem">
-					Item code: 
-					<input id="itemCode" name="itemCode" type="text" class="form-control form-control-sm">
-					
-					 <br> Item name:
-					<input id="itemName" name="itemName" type="text" class="form-control form-control-sm">
-					
-					 <br> Item price:
-					  <input id="itemPrice" name="itemPrice" type="text" class="form-control form-control-sm"> <br> 
-					  
-					  Item description:
-					   <input id="itemDesc" name="itemDesc" type="text" class="form-control form-control-sm">
-						 <br> 
-						 
-						 <input id="btnSave" name="btnSave" type="button" value="Save"class="btn btn-primary"> <input type="hidden"id="hidItemIDSave" name="hidItemIDSave" value="">
-				</form>
-				-->
 
 				<form id="formDoctor" name="formDoctor">			
 					Doctor Id :
@@ -55,10 +38,10 @@
 					<br> Doctor Mobile : 
 					<input id="dmobile" name="dmobile" type="text" class="form-control form-control-sm"> 
 					
-					<br> <input id="btnSave" name="btnSave" type="button" value="Save" class="btn btn-primary"> <input type="hidden" id="hidItemIDSave" name="hidItemIDSave" value="">
+					<br> 
+					<input id="btnSave" name="btnSave" type="button" value="Save" class="btn btn-primary"> <input type="hidden"id="hidItemIDSave" name="hidItemIDSave" value="">
 					
 				</form>
-
 
 				<div id="alertSuccess" class="alert alert-success"></div>
 

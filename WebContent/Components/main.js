@@ -134,10 +134,13 @@ function validateItemForm() {
 	// is numerical value
 	var tmpPrice = $("#dmobile").val().trim();
 	if (!$.isNumeric(tmpPrice)) {
-		return "Insert a numerical valu.";
+		return "Insert a numerical value.";
+
 	}
-	// convert to decimal price
-	$("#dmobile").val(parseInt(tmpPrice).toFixed(2));
+	if(tmpPrice.lenght != 10){
+		return "Phone number must have 10 numbers!"+tmpPrice.lenght; 
+	}
+
 
 	return true;
 }
