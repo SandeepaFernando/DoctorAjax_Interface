@@ -50,8 +50,8 @@
 				<br>
 				<div id="divItemsGrid">
 					<%
-						Doctor itemobj = new Doctor();
-						out.print(itemobj.viewDoctors());
+						Doctor doc = new Doctor();
+						out.print(doc.viewDoctors());
 					%>
 				</div>
 

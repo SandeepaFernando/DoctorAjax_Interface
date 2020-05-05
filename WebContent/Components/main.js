@@ -112,24 +112,24 @@ $(document).on("click",".btnUpdate",function(event) {
 function validateItemForm() {
 	// CODE
 	if ($("#did").val().trim() == "") {
-		return "Insert Item Doctor Id.";
+		return "Insert Doctor Id.";
 	}
 	// NAME
 	if ($("#dname").val().trim() == "") {
-		return "Insert Item Name.";
+		return "Insert Doctor Name.";
 	}
 
 	// PRICE-------------------------------
 	if ($("#daddress").val().trim() == "") {
-		return "Insert Item Address.";
+		return "Insert Doctor Address.";
 	}
 	
 	if ($("#dspecialty").val().trim() == "") {
-		return "Insert Item Description.";
+		return "Insert Doctor Specialty.";
 	}
 	
 	if ($("#dmobile").val().trim() == "") {
-		return "Insert Item Description.";
+		return "Insert Mobile.";
 	}
 	// is numerical value
 	var tmpPrice = $("#dmobile").val().trim();
